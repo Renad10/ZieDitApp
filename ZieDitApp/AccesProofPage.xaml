@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZieDitApp.AccesProofPage"
+             Title="Toegang bewijs">
+    <VerticalStackLayout
+        Padding=" 15"
+        Spacing="10">
+        <Label 
+            Text="Toegangsbewijs"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextDecorations="Underline"
+            TextTransform="Uppercase"
+            FontAttributes="Bold"
+            
+            />
+        <Label
+            Text="Evenement: Naam - datum"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+
+            />
+        <Label
+            Text="Begin - eindtijd"
+            Margin="150,5"/>
+        <Label
+            Text="Deelnemernaam: "
+            Margin="150,5"/>
+        <ImageButton 
+             x:Name="GoToQrPage"
+             Source="qr_code_svgrepo_com.png"
+             Scale="0.3"
+             Margin="50"
+             Clicked="GoToQrPage_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

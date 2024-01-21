@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZieDitApp.GuestHomepage"
+             Title="Homepage">
+    <VerticalStackLayout
+        Spacing="15"
+        VerticalOptions="Center"
+        >
+        
+            
+            
+        <Button
+            Text="Alle evenementen"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="300"/>
+        <Button
+            Text="Mijn inschrijvingen"
+            Clicked="Button_Clicked"
+            WidthRequest="300"
+            VerticalOptions="Center"
+            />
+    </VerticalStackLayout>
+</ContentPage>
