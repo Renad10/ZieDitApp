@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using ZieDitApp.MVVM.Models;
+using ZieDitApp.Repositories;
 
 namespace ZieDitApp
 {
@@ -14,9 +16,11 @@ namespace ZieDitApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            builder.Services.AddSingleton<BaseRepository<AppUser>>();
+
 
 #if DEBUG
-		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

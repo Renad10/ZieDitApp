@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZieDitApp.LoginPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+            <Label Text="E-mailadres"/>
+            <Entry x:Name="emailEntry"/>
+
+            <Label Text="Password"/>
+            <Entry x:Name="passwordEntry"/>
+
+            <Button x:Name="logInButton" Text="Log in" Clicked="logInButton_Clicked"/>
+
+            <Label Text="Heb je nog geen account?"/>
+            <Button x:Name="makeAccountButton" BackgroundColor="Transparent" BorderColor="Transparent" TextColor="{StaticResource Primary}" Text="Maak nieuwe account aan" Clicked="makeAccountButton_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
