@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZieDitApp.MVVM.Views.Organizer.OrganizerHomePage"
-             Title="OrganizerHomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to organizer homepage"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Organizer Home Page">
+    <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+        <Button
+            Text="Event aanmaken"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Clicked="Button_Clicked"/>
+
+        <Button
+            Text="Medewerker account aanmaken"
+            
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="300"/>
+        <Button
+            Text="Event - Medewerkers koppelen"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="300"/>
+        
+        <Button
+            Text="Mijn events"
+            x:Name="AllEventsButton"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Clicked="AllEventsButton_Clicked"/>
+        
     </VerticalStackLayout>
 </ContentPage>

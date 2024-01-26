@@ -6,4 +6,14 @@ public partial class OrganizerHomePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new MakeEventView());
+    }
+
+    private void AllEventsButton_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new AllEventsView());
+    }
 }

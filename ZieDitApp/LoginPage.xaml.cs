@@ -36,7 +36,7 @@ namespace ZieDitApp
             }
             else
             {
-                DisplayAlert("Error", "incorrect email and password", "Ok");
+                DisplayAlert("Error", "Onjuiste E-mailadres en Wachtwoord combenatie.", "Ok");
             }
         }
 

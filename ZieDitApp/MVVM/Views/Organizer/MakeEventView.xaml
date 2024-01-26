@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZieDitApp.MVVM.Views.Organizer.MakeEventView"
+             xmlns:local="clr-namespace:ZieDitApp.MVVM.ViewModels"
+             Title="MakeEventView">
+    <ContentPage.BindingContext>
+        <local:MakeEventViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <VerticalStackLayout Spacing="5" Margin="10">
+            <Label Text="Event naam"/>
+            <Entry x:Name="EventNameEntry" Text="{Binding EventName,Mode=TwoWay}"/>
+
+            <Label Text="Event beschrijving"/>
+            <Entry x:Name="EventDescriptionEntry" Text="{Binding EventDescription,Mode=TwoWay}"/>
+
+            <Label Text="Datum"/>
+            <DatePicker MinimumDate="01/01/2024"
+                    MaximumDate="12/31/2024"
+                    Date="{Binding EventDate, Mode=TwoWay}"
+                    />
+
+            <Label Text="Start tijd"/>
+            <Entry x:Name="StartTimeEntry" Text="{Binding EventStartTime,Mode=TwoWay}"/>
+
+            <Label Text="Eind tijd"/>
+            <Entry x:Name="EndTimeEntry" Text="{Binding EventEndTime,Mode=TwoWay}"/>
+
+            <Label Text="Maximaal deelnemers"/>
+            <Entry x:Name="MaxCapacityEntry" Text="{Binding EventMaxCapacity,Mode=TwoWay}"/>
+
+            <Button x:Name="ShowActivityEntires" Text="Koppel activiteit" Clicked="ShowActivityEntires_Clicked"/>
+            <Label Text="{Binding AddedActivitiesNumber , StringFormat='Aantal toegevoegde activiteiten: {0}'}"/>
+
+            <Label x:Name="ActivityNameLabel" Text="Activiteit naam" IsVisible="false"/>
+            <Entry x:Name="ActivityNameEntry" IsVisible="false" Text="{Binding ActivityName,Mode=TwoWay}"/>
+
+            <Label x:Name="ActivityDescriptionLabel" Text="Activiteit beschrijving" IsVisible="false"/>
+            <Entry x:Name="ActivityDescriptionEntry" IsVisible="false" Text="{Binding ActivityDescription,Mode=TwoWay}"/>
+
+            <Label x:Name="ActivityStartTimeLabel" Text="Start tijd" IsVisible="false"/>
+            <Entry x:Name="ActivityStartTimeEntry" IsVisible="false" Text="{Binding ActivityStartTime,Mode=TwoWay}"/>
+
+            <Label x:Name="ActivityEndTimeLabel" Text="Eind tijd" IsVisible="false"/>
+            <Entry x:Name="ActivityEndTimeEntry" IsVisible="false" Text="{Binding ActivityEndTime,Mode=TwoWay}"/>
+
+
+            <Button x:Name="AddActivityToEvent" Text="Activiteit toevoegen" IsVisible="false" Command="{Binding AddActivityToEventCommand}" Clicked="AddActivityToEvent_Clicked"/>
+            <Button x:Name="SaveEvent" Text="Event opslaan" Command="{Binding AddEventCommand}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
