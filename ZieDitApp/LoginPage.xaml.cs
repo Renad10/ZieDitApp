@@ -44,5 +44,10 @@ namespace ZieDitApp
         {
             Navigation.PushAsync(new MakeAccountPage());
         }
+
+        private void forgotPasswordButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GuestHomepage());
+        }
     }
 }

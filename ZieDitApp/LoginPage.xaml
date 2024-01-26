@@ -19,6 +19,17 @@
             <Label Text="Wachtwoord"/>
             <Entry x:Name="passwordEntry"/>
 
+            <Button x:Name="forgotPasswordButton" 
+                    BackgroundColor="Transparent" 
+                    BorderColor="Transparent" 
+                    TextColor="{StaticResource Primary}" 
+                    FontAttributes="Bold"
+                    Text="Wachtwoord vergeten?"
+                    Clicked="forgotPasswordButton_Clicked"  
+                    />
+        
+        
+
             <Button x:Name="logInButton" Text="Log in" Clicked="logInButton_Clicked"/>
 
             <Label Text="Heb je nog geen account?"/>
@@ -27,7 +38,7 @@
                     BorderColor="Transparent" 
                     TextColor="{StaticResource Primary}" 
                     FontAttributes="Bold"
-                    Text="Maak nieuwe account aan" 
+                    Text="Maak een nieuw account aan" 
                     Clicked="makeAccountButton_Clicked"
                     />
 
