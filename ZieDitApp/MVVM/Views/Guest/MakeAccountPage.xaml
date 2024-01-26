@@ -19,7 +19,11 @@
             <Entry x:Name="emailEntry"/>
 
             <Label Text="Wachtwoord"/>
-            <Entry x:Name="passwordEntry"/>
+            <Entry x:Name="passwordEntry" IsPassword="True"/>
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                <Label Text="Toon wachtwoord" VerticalOptions="Center" />
+                <Switch x:Name="showPasswordSwitch" Toggled="OnShowPasswordToggled" />
+            </StackLayout>
 
             <Button Text="Aanmaken" x:Name="RegisterButton" Clicked="RegisterButton_Clicked"/>
 

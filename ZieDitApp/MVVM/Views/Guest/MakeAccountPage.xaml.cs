@@ -28,4 +28,10 @@ public partial class MakeAccountPage : ContentPage
             await Navigation.PushAsync(new LoginPage());
         }
     }
+
+    private void OnShowPasswordToggled(object sender, ToggledEventArgs e)
+    {
+        passwordEntry.IsPassword = !e.Value;
+    }
+
 }

@@ -26,4 +26,6 @@ public partial class OrganizerHomePage : ContentPage
     {
         Navigation.PushAsync(new LinkEmpToEventView());
     }
+
+
 }

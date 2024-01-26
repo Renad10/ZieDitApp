@@ -19,7 +19,13 @@ namespace ZieDitApp
             EventAppUserRepo = eventAppUserRepo;
 
             AppUser Organizer = new AppUser() {firstName="Organisator", lastName="Orga", email = "organizer@gmail.com", password = "1234", role = "organizer" };
-            appUserRepo.SaveEntity(Organizer);
+            List<AppUser> organizers = App.AppUserRepo.GetEntities().Where(a => a.role == "organizer").ToList();
+
+            if(organizers.Count < 1 ) 
+            {
+                appUserRepo.SaveEntity(Organizer);
+            }
+            
             MainPage = new AppShell();
         }
     }

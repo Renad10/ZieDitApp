@@ -39,6 +39,10 @@ namespace ZieDitApp
                 DisplayAlert("Error", "Onjuiste E-mailadres en Wachtwoord combenatie.", "Ok");
             }
         }
+        private void OnShowPasswordToggled(object sender, ToggledEventArgs e)
+        {
+            passwordEntry.IsPassword = !e.Value;
+        }
 
         private void makeAccountButton_Clicked(object sender, EventArgs e)
         {

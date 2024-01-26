@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZieDitApp.MVVM.Views.Organizer.MakeEventView"
              xmlns:local="clr-namespace:ZieDitApp.MVVM.ViewModels"
-             Title="MakeEventView">
+             Title="Evenement aanmaken">
     <ContentPage.BindingContext>
         <local:MakeEventViewModel/>
     </ContentPage.BindingContext>

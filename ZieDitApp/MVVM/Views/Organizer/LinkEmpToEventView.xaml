@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ZieDitApp.MVVM.ViewModels"
              x:Class="ZieDitApp.MVVM.Views.Organizer.LinkEmpToEventView"
              
-             Title="LinkEmpToEventView">
+             Title="Medewerker-Event koppelen">
     <ContentPage.BindingContext>
         <local:LinkEmpToEventViewModel/>
     </ContentPage.BindingContext>
@@ -14,13 +14,20 @@
         ItemDisplayBinding="{Binding name}"
         SelectedItem="{Binding SelectedEvent , Mode=TwoWay}"/>
 
-        <Picker Title="Selecteer een evenement:"           
+        <Picker Title="Selecteer een medewerker:"        
         ItemsSource="{Binding Employees}"
         ItemDisplayBinding="{Binding firstName}"
         SelectedItem="{Binding SelectedEmployee , Mode=TwoWay}"/>
-
+        <Label Text="Medewerker details"  FontAttributes="Bold" BackgroundColor="{StaticResource Primary}" TextColor="White"/>
+        <Label Text="Medewerker Id:" FontAttributes="Bold"/>
+        <Label Text="{Binding SelectedEmployee.Id}"/>
+        <Label Text="Medewerker voornaam:" FontAttributes="Bold"/>
+        <Label Text="{Binding SelectedEmployee.firstName}"/>
+        <Label Text="Medewerker achternaam:" FontAttributes="Bold"/>
+        <Label Text="{Binding SelectedEmployee.lastName}"/>
         <Button x:Name="LinkEmpToEventBtn"
-                />
+                Text="Koppelen"
+                Command="{Binding LinkEmpToEventCommand}"/>
 
     </VerticalStackLayout>
 </ContentPage>
