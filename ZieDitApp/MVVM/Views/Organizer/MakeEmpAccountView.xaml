@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZieDitApp.MVVM.Views.Organizer.MakeEmpAccountView"
+             Title="MakeEmpAccountView">
+    <ScrollView>
+        <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Center">
+
+            <Label Text="Medewerker voornaam"/>
+            <Entry x:Name="firstNameEntry"/>
+
+            <Label Text="Medewerker achternaam"/>
+            <Entry x:Name="lastNameEntry"/>
+
+            <Label Text="Medewerker e-mailadres"/>
+            <Entry x:Name="emailEntry"/>
+
+            <Label Text="Wachtwoord"/>
+            <Entry x:Name="passwordEntry"/>
+
+            <Button Text="Aanmaken" x:Name="RegisterButton" Clicked="RegisterButton_Clicked"/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -199,6 +199,7 @@ namespace ZieDitApp.MVVM.ViewModels
                     activities = Activites,
                 };
                 App.EventRepo.SaveEntityWithChildren(myEvent);
+                
 
 
                 Console.WriteLine(App.EventRepo.StatusMessage);

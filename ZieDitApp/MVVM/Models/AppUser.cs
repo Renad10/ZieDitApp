@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLiteNetExtensions.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,5 +15,9 @@ namespace ZieDitApp.MVVM.Models
         public string email { get; set; }
         public string password { get; set; }
         public string role { get; set; }
+
+        [ManyToMany(typeof(EventAppUser))]
+        public List<Event>? events { get; set; }
+
     }
 }

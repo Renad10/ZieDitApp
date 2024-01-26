@@ -15,5 +15,6 @@ namespace ZieDitApp.Abstractions
         void SaveEntityWithChildren(T entity, bool recursive = false);
         void DeleteEntityWithChildren(T entity);
         List<T>? GetEntitiesWithChildren();
+        void UpdateEntityWithChildren(T entity);
     }
 }

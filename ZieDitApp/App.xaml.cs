@@ -8,12 +8,15 @@ namespace ZieDitApp
         public static BaseRepository<AppUser>? AppUserRepo { get; private set; }
         public static BaseRepository<Activity>? ActivityRepo { get; private set; }
         public static BaseRepository<Event>? EventRepo { get; private set; }
-        public App(BaseRepository<AppUser> appUserRepo, BaseRepository<Activity> activityRepo, BaseRepository<Event> eventRepo)
+
+        public static BaseRepository<EventAppUser>? EventAppUserRepo { get; private set; }
+        public App(BaseRepository<AppUser> appUserRepo, BaseRepository<Activity> activityRepo, BaseRepository<Event> eventRepo, BaseRepository<EventAppUser> eventAppUserRepo)
         {
             InitializeComponent();
             AppUserRepo = appUserRepo;
             ActivityRepo = activityRepo;
             EventRepo = eventRepo;
+            EventAppUserRepo = eventAppUserRepo;
 
             AppUser Organizer = new AppUser() {firstName="Organisator", lastName="Orga", email = "organizer@gmail.com", password = "1234", role = "organizer" };
             appUserRepo.SaveEntity(Organizer);

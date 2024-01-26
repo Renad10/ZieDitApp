@@ -16,4 +16,14 @@ public partial class OrganizerHomePage : ContentPage
     {
         Navigation.PushAsync(new AllEventsView());
     }
+
+    private void MakeEmployeeAccountPage_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new MakeEmpAccountView());
+    }
+
+    private void LinkEmpToEventPage_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new LinkEmpToEventView());
+    }
 }

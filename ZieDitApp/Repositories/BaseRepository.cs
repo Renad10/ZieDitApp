@@ -121,5 +121,19 @@ namespace ZieDitApp.Repositories
         {
             connection.InsertWithChildren(entity, recursive);
         }
+
+        public void UpdateEntityWithChildren(T entity)
+        {
+            try
+            {
+                connection.UpdateWithChildren(entity);
+                StatusMessage = "Entity updated with children";
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Error: {ex.Message}";
+            }
+        }
+
     }
 }

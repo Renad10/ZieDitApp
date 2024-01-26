@@ -21,6 +21,7 @@ namespace ZieDitApp
             builder.Services.AddSingleton<BaseRepository<AppUser>>();
             builder.Services.AddSingleton<BaseRepository<Event>>();
             builder.Services.AddSingleton<BaseRepository<Activity>>();
+            builder.Services.AddSingleton<BaseRepository<EventAppUser>>();
 
 
 

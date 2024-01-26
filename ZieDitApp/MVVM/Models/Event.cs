@@ -18,6 +18,9 @@ namespace ZieDitApp.MVVM.Models
         public int maxCapacity { get; set; }
         public int registeredParticipants { get; set; }
         [OneToMany(CascadeOperations = CascadeOperation.All)]
-        public List<Activity> activities { get; set; }
+        public List<Activity>? activities { get; set; }
+
+        [ManyToMany(typeof(EventAppUser))]
+        public List<AppUser>? appUsers { get; set; }
     }
 }

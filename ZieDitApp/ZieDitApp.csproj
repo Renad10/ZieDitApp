@@ -80,6 +80,12 @@
 	  <MauiXaml Update="MVVM\Views\Organizer\AllEventsView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\Organizer\LinkEmpToEventView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MVVM\Views\Organizer\MakeEmpAccountView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\Organizer\MakeEventView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
