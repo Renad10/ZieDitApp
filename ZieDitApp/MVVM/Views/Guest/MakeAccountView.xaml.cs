@@ -2,9 +2,9 @@ using ZieDitApp.MVVM.Models;
 
 namespace ZieDitApp.MVVM.Views.Guest;
 
-public partial class MakeAccountPage : ContentPage
+public partial class MakeAccountView : ContentPage
 {
-	public MakeAccountPage()
+	public MakeAccountView()
 	{
 		InitializeComponent();
 	}

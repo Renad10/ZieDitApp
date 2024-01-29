@@ -21,6 +21,7 @@ namespace ZieDitApp
             AppUser user = App.AppUserRepo.GetEntities().FirstOrDefault(u => u.email == email && u.password == password);
             if (user != null)
             {
+                App.CurrentUserId = user.Id;
                 if (user.role == "organizer")
                 {
                     Navigation.PushAsync(new OrganizerHomePage());
@@ -31,7 +32,7 @@ namespace ZieDitApp
                 }
                 if (user.role == "guest")
                 {
-                    Navigation.PushAsync(new GuestHomepage());
+                    Navigation.PushAsync(new GuestHomeView());
                 }
             }
             else
@@ -46,12 +47,12 @@ namespace ZieDitApp
 
         private void makeAccountButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MakeAccountPage());
+            Navigation.PushAsync(new MakeAccountView());
         }
 
         private void forgotPasswordButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GuestHomepage());
+            Navigation.PushAsync(new GuestHomeView());
         }
     }
 }

@@ -1,8 +1,8 @@
 namespace ZieDitApp;
 
-public partial class AccesProofPage : ContentPage
+public partial class AccesProofView : ContentPage
 {
-	public AccesProofPage()
+	public AccesProofView()
 	{
 		InitializeComponent();
 	}

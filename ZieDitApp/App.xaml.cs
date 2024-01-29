@@ -5,6 +5,7 @@ namespace ZieDitApp
 {
     public partial class App : Application
     {
+        public static int CurrentUserId {get; set;}
         public static BaseRepository<AppUser>? AppUserRepo { get; private set; }
         public static BaseRepository<Activity>? ActivityRepo { get; private set; }
         public static BaseRepository<Event>? EventRepo { get; private set; }

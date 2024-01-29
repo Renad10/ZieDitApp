@@ -68,7 +68,7 @@
 	  <MauiXaml Update="MVVM\Views\Guest\AccesProofView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="MVVM\Views\Guest\GuestAllEventView.xaml">
+	  <MauiXaml Update="MVVM\Views\Guest\GeustAllEventPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MVVM\Views\Guest\GuestHomeView.xaml">
@@ -104,17 +104,8 @@
 	  <Compile Update="MVVM\Views\Guest\AccesProofView.xaml.cs">
 	    <DependentUpon>AccesProofView.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="MVVM\Views\Guest\GuestAllEventView.xaml.cs">
-	    <DependentUpon>GuestAllEventView.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MVVM\Views\Guest\GuestAllEventView.xaml.cs">
-	    <DependentUpon>GuestAllEventView.xaml</DependentUpon>
-	  </Compile>
 	  <Compile Update="MVVM\Views\Guest\GuestHomeView.xaml.cs">
 	    <DependentUpon>GuestHomeView.xaml</DependentUpon>
-	  </Compile>
-	  <Compile Update="MVVM\Views\Guest\MakeAccountView.xaml.cs">
-	    <DependentUpon>MakeAccountView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 

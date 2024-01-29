@@ -32,8 +32,8 @@
                     Text="Wachtwoord vergeten?"
                     Clicked="forgotPasswordButton_Clicked"  
                     />
-        
-        
+
+
 
             <Button x:Name="logInButton" Text="Log in" Clicked="logInButton_Clicked"/>
 
@@ -49,5 +49,4 @@
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
