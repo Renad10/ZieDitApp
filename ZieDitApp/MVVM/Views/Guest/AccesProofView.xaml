@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             xmlns:local="clr-namespace:ZieDitApp.MVVM.ViewModels"
              x:Class="ZieDitApp.AccesProofView"
              Title="Toegang bewijs">
+    <ContentPage.BindingContext>
+        <local:RegisterToEventViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        
+    
     <VerticalStackLayout
+        
         Padding=" 15"
         Spacing="10">
         <Label 
@@ -12,26 +21,43 @@
             HorizontalOptions="Center"
             TextDecorations="Underline"
             TextTransform="Uppercase"
-            FontAttributes="Bold"
+            FontAttributes="Bold"/>
+            <Label
+                Text="Event details" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label
+        Text="{Binding Event.name, StringFormat='Event naam: {0}'}"
             
             />
+        
         <Label
-            Text="Evenement: Naam - datum"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
+        Text="{Binding Event.startTime, StringFormat='Begintijd: {0}'}"/>
+        
+        <Label
+        Text="{Binding Event.endTime, StringFormat='Eindtijd: {0}'}"/>
 
-            />
+            <Label
+    Text="Deelnemer details" FontAttributes="Bold" HorizontalOptions="Center"/>
+        
+            <Label
+        Text="{Binding CurrentUser.firstName, StringFormat='Deelnemer voornaam: {0}'}"/>
+        
         <Label
-            Text="Begin - eindtijd"
-            Margin="150,5"/>
-        <Label
-            Text="Deelnemernaam: "
-            Margin="150,5"/>
-        <ImageButton 
-             x:Name="GoToQrPage"
-             Source="qr_code_svgrepo_com.png"
-             Scale="0.3"
-             Margin="50"
-             Clicked="GoToQrPage_Clicked"/>
+        Text="{Binding CurrentUser.lastName, StringFormat='Deelnemer achternaam: {0}'}"/>
+        
+        <Button x:Name="ShowQRcode" Text="QR-Code weergeven" Clicked="ShowQRcode_Clicked"/>
+        <cv:BarcodeImage x:Name="QrCodeImage"
+                 WidthRequest="400" 
+                 HeightRequest="400" 
+                 BarcodeHeight="400"
+                 BarcodeWidth="400"
+                 BarcodeBackground="white"
+                 BarcodeForeground="{StaticResource Primary}"
+                 BarcodeFormat="QR_CODE"
+                 Barcode="{Binding AccesBarCode}"
+                 IsVisible="False"
+                 BarcodeMargin="5"
+                 />
+    
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

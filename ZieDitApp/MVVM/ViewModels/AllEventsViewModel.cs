@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using ZieDitApp.MVVM.Models;
 
 namespace ZieDitApp.MVVM.ViewModels
@@ -37,10 +39,17 @@ namespace ZieDitApp.MVVM.ViewModels
                 }
             }
         }
+        public ICommand GoToView { get; set; }
         public AllEventsViewModel()
         {
             GetAllEvents();
+            GoToView = new Command(async () =>
+            {
+                
+
+            });
         }
+        
         private void GetAllEvents()
         {
            Events = App.EventRepo.GetEntitiesWithChildren();

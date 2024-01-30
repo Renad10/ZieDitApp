@@ -1,3 +1,4 @@
+using System.Windows.Input;
 using ZieDitApp.MVVM.ViewModels;
 
 namespace ZieDitApp.MVVM.Views.Guest;
@@ -5,15 +6,24 @@ namespace ZieDitApp.MVVM.Views.Guest;
 public partial class GuestAllEventView : ContentPage
 {
 	public readonly AllEventsViewModel _viewModel;
-	public GuestAllEventView()
+    
+    public GuestAllEventView()
 	{
 		InitializeComponent();
 		_viewModel = new AllEventsViewModel();
 		BindingContext = _viewModel;
-	}
 
-    private void DetailsBtn_Clicked(object sender, EventArgs e)
+        
+    }
+    
+
+    private void DetailsSwipeItem_Clicked(object sender, EventArgs e)
     {
+        Navigation.PushAsync(new EventDetailsView(_viewModel.SelectedEvent));
+    }
 
+    private void T_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new EventDetailsView(_viewModel.SelectedEvent));
     }
 }

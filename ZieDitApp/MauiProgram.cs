@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui;
+﻿using Camera.MAUI;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using ZieDitApp.MVVM.Models;
 using ZieDitApp.Repositories;
@@ -12,6 +13,7 @@ namespace ZieDitApp
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCameraView()
                 .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {

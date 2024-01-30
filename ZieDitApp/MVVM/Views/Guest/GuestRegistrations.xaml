@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ZieDitApp.MVVM.ViewModels"
              x:Class="ZieDitApp.GuestRegistrations"
              Title="Mijn inschrijvingen">
+    <ContentPage.BindingContext>
+        <local:RegisterToEventViewModel/>
+    </ContentPage.BindingContext>
     <VerticalStackLayout
         Spacing="50">
-        <Label 
-            Text="Evenement 1" 
-            Padding="15"
-            HorizontalOptions="Center"
-            />
-        <Label
-            Text="Evenement 2"
-            HorizontalOptions="Center"
+        <VerticalStackLayout>
+            <ListView x:Name="EventsListView" ItemsSource="{Binding CurrentUser.events}" SelectedItem="{Binding SelectedEvent}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding name}" Detail="{Binding date}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             
-            />
-        
+        </VerticalStackLayout>
         <Button
             Text="Ga naar toegang bewijs"
+            x:Name="AccesProofBtn"
             VerticalOptions="Center"
             Margin="150"
-            Clicked="Button_Clicked"
+            Clicked="AccesProofBtn_Clicked"
             
             WidthRequest="300"/>
     </VerticalStackLayout>

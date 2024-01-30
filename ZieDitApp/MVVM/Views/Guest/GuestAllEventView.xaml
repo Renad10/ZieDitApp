@@ -7,15 +7,42 @@
     <ContentPage.BindingContext>
         <local:AllEventsViewModel/>
     </ContentPage.BindingContext>
-    <VerticalStackLayout>
-        <ListView x:Name="EventsListView" ItemsSource="{Binding Events}" SelectedItem="{Binding SelectedEvent}">
-            <ListView.ItemTemplate>
+    <VerticalStackLayout >
+        <CollectionView 
+            Grid.Row="1"
+            ItemsSource="{Binding Events}"
+            SelectionMode="Single"
+            SelectedItem="{Binding SelectedEvent}">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding name}" Detail="{Binding date}" />
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem
+                                    Text="Details"
+                                    x:Name="DetailsSwipeItem"
+                                    BackgroundColor="Red"
+                                    Clicked="DetailsSwipeItem_Clicked"
+                                    
+                                    />
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid
+                            Padding="10"
+                            ColumnDefinitions="*,*"
+                            >
+                            <Label
+                                Text="{Binding name}"
+                                Grid.Column="0"/>
+                            <Label
+                                Text="{Binding date}"
+                                Grid.Column="1"/>
+
+                        </Grid>
+                    </SwipeView>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Label Text="{Binding SelectedEvent.Id}"/>
-        <Button x:Name="DetailsBtn" Text="Details"/>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button x:Name="T" Clicked="T_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
