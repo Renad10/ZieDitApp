@@ -6,12 +6,20 @@
              Title="ControlProofAccessView">
     <VerticalStackLayout Spacing="10" Padding="10">
         <Label Text="Scan de toegangbewijs van de deelnemer"/>
-        <Label x:Name="TestLbl" Text="Test label"/>
+        <Label Text="Event details"/>
+        <Label Text="{Binding Event.name}"/>
+        <Label Text="{Binding Event.startTime}"/>
+        <Label Text="{Binding Event.endTime}"/>
+        <Label Text="Gast details"/>
+        <Label Text="{Binding Guest.firstName}"/>
+        <Label Text="{Binding Guest.lastName}"/>
+        
 
         <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="400"
                        BarCodeDetectionEnabled="True"
                        BarcodeDetected="cameraView_BarcodeDetected"
                        CamerasLoaded="cameraView_CamerasLoaded"
+                      
                        />
 
     </VerticalStackLayout>

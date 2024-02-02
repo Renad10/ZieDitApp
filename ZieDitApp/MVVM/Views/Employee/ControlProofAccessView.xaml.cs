@@ -1,13 +1,16 @@
 
+using ZieDitApp.MVVM.ViewModels;
 
 namespace ZieDitApp.MVVM.Views.Employee;
 
 public partial class ControlProofAccessView : ContentPage
 {
+    private readonly GuestInformationViewModel _viewModel;
 	public ControlProofAccessView()
 	{
 		InitializeComponent();
-       
+        _viewModel = new GuestInformationViewModel();
+        BindingContext = _viewModel;
     }
 
 
@@ -16,7 +19,9 @@ public partial class ControlProofAccessView : ContentPage
     {
         MainThread.BeginInvokeOnMainThread(() =>
         {
-            TestLbl.Text = args.Result[0].Text;
+            _viewModel.ScannedBarcode = args.Result[0].Text;
+            _viewModel.GetEventAndGuest();
+            
         });
     }
 

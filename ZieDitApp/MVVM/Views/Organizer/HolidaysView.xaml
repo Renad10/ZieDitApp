@@ -14,23 +14,23 @@
             <Entry x:Name="YearEntry" Text="{Binding Year, Mode=TwoWay}"/>
             <Button Text="Feesdagen weergeven"  Command="{Binding GetHolidaysCommand}"/>
 
-        <CollectionView x:Name="HolidaysCollection" ItemsSource="{Binding Holidays}" VerticalOptions="FillAndExpand" Margin="0,5,0,0">
+        <CollectionView x:Name="HolidaysCollection" ItemsSource="{Binding Holidays}" VerticalOptions="FillAndExpand" Margin="5" >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-
-                    <StackLayout Margin="0,5,0,0">
-                        <Label Text="{Binding name}" FontAttributes="Bold" />
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding date.datetime.day}" />
-                                <Label Text="-" />
-                                <Label Text="{Binding date.datetime.month}" />
-                                <Label Text="-" />
-                                <Label Text="{Binding date.datetime.year}" />
+                        <Frame BorderColor="{StaticResource Primary}">
+                            <StackLayout Margin="5">
+                                <Label Text="{Binding name}" FontAttributes="Bold" />
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding date.datetime.day}" />
+                                        <Label Text="-" />
+                                        <Label Text="{Binding date.datetime.month}" />
+                                        <Label Text="-" />
+                                        <Label Text="{Binding date.datetime.year}" />
+                                    </StackLayout>
+                                    <Label Text="{Binding description}"/>
                             </StackLayout>
-                            <Label Text="{Binding description}"/>
-                    </StackLayout>
-
-                </DataTemplate>
+                        </Frame>
+                    </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
     </VerticalStackLayout>
