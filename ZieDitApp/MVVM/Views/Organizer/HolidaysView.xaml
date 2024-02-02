@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ZieDitApp.MVVM.ViewModels"
+             x:Class="ZieDitApp.MVVM.Views.Organizer.HolidaysView"
+             Title="HolidaysView">
+    <ContentPage.BindingContext>
+        <local:HolidaysViewModels/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        
+    
+    <VerticalStackLayout Spacing="20" Padding="10">
+            <Entry x:Name="YearEntry" Text="{Binding Year, Mode=TwoWay}"/>
+            <Button Text="Feesdagen weergeven"  Command="{Binding GetHolidaysCommand}"/>
+
+        <CollectionView x:Name="HolidaysCollection" ItemsSource="{Binding Holidays}" VerticalOptions="FillAndExpand" Margin="0,5,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackLayout Margin="0,5,0,0">
+                        <Label Text="{Binding name}" FontAttributes="Bold" />
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding date.datetime.day}" />
+                                <Label Text="-" />
+                                <Label Text="{Binding date.datetime.month}" />
+                                <Label Text="-" />
+                                <Label Text="{Binding date.datetime.year}" />
+                            </StackLayout>
+                            <Label Text="{Binding description}"/>
+                    </StackLayout>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -3,6 +3,7 @@ using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using ZieDitApp.MVVM.Models;
 using ZieDitApp.Repositories;
+using ZXing.Net.Maui.Controls;
 
 namespace ZieDitApp
 {
@@ -14,6 +15,7 @@ namespace ZieDitApp
             builder
                 .UseMauiApp<App>()
                 .UseMauiCameraView()
+                .UseBarcodeReader()
                 .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="ZieDitApp.MVVM.Views.Employee.ControlProofAccessView"
+             Title="ControlProofAccessView">
+    <VerticalStackLayout Spacing="10" Padding="10">
+        <Label Text="Scan de toegangbewijs van de deelnemer"/>
+        <Label x:Name="TestLbl" Text="Test label"/>
+
+        <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="400"
+                       BarCodeDetectionEnabled="True"
+                       BarcodeDetected="cameraView_BarcodeDetected"
+                       CamerasLoaded="cameraView_CamerasLoaded"
+                       />
+
+    </VerticalStackLayout>
+</ContentPage>

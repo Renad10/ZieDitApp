@@ -27,5 +27,14 @@ public partial class OrganizerHomePage : ContentPage
         Navigation.PushAsync(new LinkEmpToEventView());
     }
 
+    private void HolidaysBtn_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new HolidaysView());
+    }
 
+    private async void Test_Clicked(object sender, EventArgs e)
+    {
+        
+
+    }
 }

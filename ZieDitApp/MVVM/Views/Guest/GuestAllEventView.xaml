@@ -8,6 +8,7 @@
         <local:AllEventsViewModel/>
     </ContentPage.BindingContext>
     <VerticalStackLayout >
+        <Label Text="Veeg event naar recht om details knop te zien" FontAttributes="Bold" Margin="10"/>
         <CollectionView 
             Grid.Row="1"
             ItemsSource="{Binding Events}"

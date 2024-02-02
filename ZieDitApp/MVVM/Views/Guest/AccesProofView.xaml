@@ -51,7 +51,7 @@
                  BarcodeHeight="400"
                  BarcodeWidth="400"
                  BarcodeBackground="white"
-                 BarcodeForeground="{StaticResource Primary}"
+                 BarcodeForeground="Black"
                  BarcodeFormat="QR_CODE"
                  Barcode="{Binding AccesBarCode}"
                  IsVisible="False"

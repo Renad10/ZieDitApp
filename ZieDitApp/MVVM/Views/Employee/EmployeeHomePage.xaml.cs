@@ -6,4 +6,9 @@ public partial class EmployeeHomePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void ControlAccessProofBtn_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PushAsync(new ControlProofAccessView());	
+    }
 }

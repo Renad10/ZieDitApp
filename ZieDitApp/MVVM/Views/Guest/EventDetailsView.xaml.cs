@@ -13,9 +13,7 @@ public partial class EventDetailsView : ContentPage
 		InitializeComponent();
 		viewModel = new RegisterToEventViewModel();
 		BindingContext = viewModel;
-		viewModel.Event = Event;
-
-		
+		viewModel.Event = Event;	
 	}
 
     private async void Register_Clicked(object sender, EventArgs e)
@@ -24,7 +22,6 @@ public partial class EventDetailsView : ContentPage
 
         if (userResponse)
         {
-
 			viewModel.RegisterGuestForEvent.Execute(null);
 		}
     }

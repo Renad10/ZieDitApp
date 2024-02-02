@@ -9,6 +9,6 @@ public partial class LinkEmpToEventView : ContentPage
 	{
 		InitializeComponent();
 		_viewModel = new LinkEmpToEventViewModel();
-		BindingContext = _viewModel;
+		BindingContext = _viewModel;	
 	}
 }

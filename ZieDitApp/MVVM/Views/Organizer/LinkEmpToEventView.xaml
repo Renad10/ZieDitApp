@@ -9,7 +9,8 @@
         <local:LinkEmpToEventViewModel/>
     </ContentPage.BindingContext>
     <VerticalStackLayout HorizontalOptions="Center" Spacing="5">
-        <Picker Title="Selecteer een evenement:"           
+        <Picker Title="Selecteer een evenement:"
+                x:Name="EventPicker"
         ItemsSource="{Binding Events}"
         ItemDisplayBinding="{Binding name}"
         SelectedItem="{Binding SelectedEvent , Mode=TwoWay}"/>

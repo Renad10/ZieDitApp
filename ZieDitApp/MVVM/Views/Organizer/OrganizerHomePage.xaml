@@ -35,6 +35,16 @@
             WidthRequest="300"
             Clicked="AllEventsButton_Clicked"/>
 
+        <Button
+            Text="Feestdagen overzicht"
+            x:Name="HolidaysBtn"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Clicked="HolidaysBtn_Clicked"
+            />
+
+        
 
     </VerticalStackLayout>
 </ContentPage>
