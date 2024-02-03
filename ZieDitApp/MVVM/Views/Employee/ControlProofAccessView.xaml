@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
              x:Class="ZieDitApp.MVVM.Views.Employee.ControlProofAccessView"
-             Title="ControlProofAccessView">
+             Title="Toegangbewijs gast controleren">
     <VerticalStackLayout Spacing="10" Padding="10">
         <Label Text="Scan de toegangbewijs van de deelnemer"/>
         <Label Text="Event details" FontAttributes="Bold"/>

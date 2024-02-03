@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ZieDitApp.MVVM.Views.Employee.EmployeeHomePage"
-             Title="EmployeeHomePage">
+             Title="Medewerker Home">
     <VerticalStackLayout Spacing="10" Margin="20">
-        <Button Text="Toegangbewijs controleren" x:Name="ControlAccessProofBtn" Clicked="ControlAccessProofBtn_Clicked"/>
+        <Button Text="Toegangbewijs gast controleren" x:Name="ControlAccessProofBtn" Clicked="ControlAccessProofBtn_Clicked"/>
         
     </VerticalStackLayout>
 </ContentPage>

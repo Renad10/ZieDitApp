@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ZieDitApp.MVVM.ViewModels"
              x:Class="ZieDitApp.MVVM.Views.Organizer.HolidaysView"
-             Title="HolidaysView">
+             Title="Feestdagen overzicht">
     <ContentPage.BindingContext>
         <local:HolidaysViewModels/>
     </ContentPage.BindingContext>
@@ -13,7 +13,7 @@
     <VerticalStackLayout Spacing="20" Padding="10">
             <Label Text="Voer hier de jaar in"/>
             <Entry x:Name="YearEntry" Text="{Binding Year, Mode=TwoWay}"/>
-            <Button Text="Feesdagen weergeven"  Command="{Binding GetHolidaysCommand}"/>
+            <Button Text="Feestdagen weergeven"  Command="{Binding GetHolidaysCommand}"/>
 
         <CollectionView x:Name="HolidaysCollection" ItemsSource="{Binding Holidays}" VerticalOptions="FillAndExpand" Margin="5" >
             <CollectionView.ItemTemplate>

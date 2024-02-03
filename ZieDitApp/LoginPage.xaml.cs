@@ -37,7 +37,7 @@ namespace ZieDitApp
             }
             else
             {
-                DisplayAlert("Error", "Onjuiste E-mailadres en Wachtwoord combenatie.", "Ok");
+                DisplayAlert("Error", "Onjuiste E-mailadres of Wachtwoord.", "Ok");
             }
         }
         private void OnShowPasswordToggled(object sender, ToggledEventArgs e)
@@ -52,7 +52,7 @@ namespace ZieDitApp
 
         private void forgotPasswordButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GuestHomeView());
+            DisplayAlert("Melding", "Sorry deze feature is nog niet gerealiseerd", "OK");
         }
     }
 }
