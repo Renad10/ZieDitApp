@@ -11,9 +11,7 @@ public partial class GuestAllEventView : ContentPage
 	{
 		InitializeComponent();
 		_viewModel = new AllEventsViewModel();
-		BindingContext = _viewModel;
-
-        
+		BindingContext = _viewModel; 
     }
     
 
@@ -22,8 +20,4 @@ public partial class GuestAllEventView : ContentPage
         Navigation.PushAsync(new EventDetailsView(_viewModel.SelectedEvent));
     }
 
-    private void T_Clicked(object sender, EventArgs e)
-    {
-        Navigation.PushAsync(new EventDetailsView(_viewModel.SelectedEvent));
-    }
 }

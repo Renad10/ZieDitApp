@@ -44,6 +44,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button x:Name="T" Clicked="T_Clicked"/>
+        
     </VerticalStackLayout>
 </ContentPage>
