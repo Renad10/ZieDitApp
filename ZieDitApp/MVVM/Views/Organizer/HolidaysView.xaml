@@ -11,6 +11,7 @@
         
     
     <VerticalStackLayout Spacing="20" Padding="10">
+            <Label Text="Voer hier de jaar in"/>
             <Entry x:Name="YearEntry" Text="{Binding Year, Mode=TwoWay}"/>
             <Button Text="Feesdagen weergeven"  Command="{Binding GetHolidaysCommand}"/>
 

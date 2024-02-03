@@ -6,13 +6,13 @@
              Title="ControlProofAccessView">
     <VerticalStackLayout Spacing="10" Padding="10">
         <Label Text="Scan de toegangbewijs van de deelnemer"/>
-        <Label Text="Event details"/>
-        <Label Text="{Binding Event.name}"/>
-        <Label Text="{Binding Event.startTime}"/>
-        <Label Text="{Binding Event.endTime}"/>
-        <Label Text="Gast details"/>
-        <Label Text="{Binding Guest.firstName}"/>
-        <Label Text="{Binding Guest.lastName}"/>
+        <Label Text="Event details" FontAttributes="Bold"/>
+        <Label Text="{Binding Event.name, StringFormat = 'Event naam: {0}'}"/>
+        <Label Text="{Binding Event.startTime,StringFormat='Starttijd: {0}'}"/>
+        <Label Text="{Binding Event.endTime, StringFormat='Eindtijd: {0}'}"/>
+        <Label Text="Gast details" FontAttributes="Bold"/>
+        <Label Text="{Binding Guest.firstName, StringFormat='Gast voornaam: {0}'}"/>
+        <Label Text="{Binding Guest.lastName,StringFormat='Gast achternaam: {0}'}"/>
         
 
         <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="400"
