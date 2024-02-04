@@ -18,7 +18,7 @@ public partial class EventDetailsView : ContentPage
 
     private async void Register_Clicked(object sender, EventArgs e)
     {
-        bool userResponse = await DisplayAlert("Bevestiging", string.Format("Je gaat inschrijven voor {0} evenement", viewModel.Event.name), "Bevestiging", "Annuleren");
+        bool userResponse = await DisplayAlert("Bevestiging", string.Format("Je gaat inschrijven voor {0} evnet", viewModel.Event.name), "Bevestiging", "Annuleren");
 
         if (userResponse)
         {
