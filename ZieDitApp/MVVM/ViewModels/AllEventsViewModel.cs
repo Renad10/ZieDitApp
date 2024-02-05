@@ -35,30 +35,19 @@ namespace ZieDitApp.MVVM.ViewModels
                 if (_selectedEvent != value)
                 {
                     _selectedEvent = value;
-                    
                     OnPropertyChanged(nameof(SelectedEvent));
                 }
             }
         }
-
-        private List<AppUser> _employees;
-        public List<AppUser> Employees
-        {
-            get { return _employees; }
-            set
-            {
-                if (_employees != value)
-                {
-                    _employees = value;
-                    OnPropertyChanged(nameof(Employees));
-                }
-            }
-        }
-       
+        public ICommand GoToView { get; set; }
         public AllEventsViewModel()
         {
             GetAllEvents();
+            GoToView = new Command(async () =>
+            {
+                
 
+            });
         }
         
         private void GetAllEvents()
@@ -66,12 +55,7 @@ namespace ZieDitApp.MVVM.ViewModels
            Events = App.EventRepo.GetEntitiesWithChildren();
         }
 
-        public void GetAllEmployees()
-        {
-            Employees = SelectedEvent.appUsers.Where(m => m.role == "employee").ToList();
-        }
-
-
+        
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

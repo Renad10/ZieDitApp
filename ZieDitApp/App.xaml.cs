@@ -22,11 +22,10 @@ namespace ZieDitApp
             AppUser Organizer = new AppUser() {firstName="Organisator", lastName="Orga", email = "organizer@gmail.com", password = "1234", role = "organizer" };
             List<AppUser> organizers = App.AppUserRepo.GetEntities().Where(a => a.role == "organizer").ToList();
 
-            if (organizers.Count < 1 ) 
+            if(organizers.Count < 1 ) 
             {
                 appUserRepo.SaveEntity(Organizer);
             }
-            
             
             MainPage = new AppShell();
         }
