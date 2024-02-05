@@ -13,6 +13,8 @@
         <Picker Title="Selecteer een evenement:"           
                 ItemsSource="{Binding Events}"
                 ItemDisplayBinding="{Binding name}"
+                
+                SelectedIndexChanged="Picker_SelectedIndexChanged"
                 SelectedItem="{Binding SelectedEvent , Mode=TwoWay}"/>
         <Label Text="Evenement details" 
                FontSize="Medium" 
@@ -63,7 +65,7 @@
                    BackgroundColor="{StaticResource Primary}" 
                    TextColor="White"/>
 
-            <CollectionView ItemsSource="{Binding SelectedEvent.appUsers}" VerticalOptions="FillAndExpand" Margin="0,5,0,0">
+            <CollectionView ItemsSource="{Binding Employees}" VerticalOptions="FillAndExpand" Margin="0,5,0,0">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <HorizontalStackLayout Spacing="20">
