@@ -64,5 +64,12 @@ public partial class MakeEventView : ContentPage
     {
         ChangeActivityControlsVisibility();
         MakeActivityEntriesEmpty();
+        ShowConfirmation("Activity added for event", " This activity is now part of event", "Alright");
+
+    }
+
+    public async Task ShowConfirmation(string title, string info, string aight)
+    {
+        await DisplayAlert(title, info, aight);
     }
 }

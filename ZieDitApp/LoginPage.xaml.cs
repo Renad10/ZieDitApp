@@ -12,8 +12,10 @@ namespace ZieDitApp
         public LoginPage()
         {
             InitializeComponent();
-        }
 
+
+        }
+        
         private void logInButton_Clicked(object sender, EventArgs e)
         {
             string email = emailEntry.Text;
@@ -53,6 +55,21 @@ namespace ZieDitApp
         private void forgotPasswordButton_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Melding", "Sorry deze feature is nog niet gerealiseerd", "OK");
+        }
+
+        private void CheckOrganisor_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if (CheckOrganisor.IsChecked == true)
+            {
+                emailEntry.Text = "organizer@gmail.com";
+                passwordEntry.Text = "1234";
+            }
+            if (CheckOrganisor.IsChecked == false) {
+                emailEntry.Text = string.Empty;
+                passwordEntry.Text = string.Empty;
+            }
+            
+            
         }
     }
 }
