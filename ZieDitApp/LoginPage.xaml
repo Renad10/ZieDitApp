@@ -21,11 +21,6 @@
         Padding="30,0"
         VerticalOptions="Center">
 
-            <Label HorizontalOptions="Center" Text="Fill Organisor login credentials? Click under here."/>
-            <CheckBox x:Name="CheckOrganisor"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  CheckedChanged="CheckOrganisor_CheckedChanged"    />
-            <Label HorizontalOptions="Center" Text="If no events are ever made, then it's in a useless state"/>
-            
-
             <Label Text="E-mailadres"/>
             <Entry x:Name="emailEntry"/>
 
